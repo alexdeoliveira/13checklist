@@ -1,0 +1,18 @@
+body {
+	background-color: #8A8A8A;
+}
+.text-align-center {
+	text-align: center;
+}
+h3.titlemaster {
+	font-size: 30px;
+	color: #fff;
+	background: #bbb;
+	padding: .4em;
+	margin: .8em auto .2em auto;
+}
+.icheckbox_flat-green {
+	float: left;
+	margin-right: 5px!important;
+	margin-top: 7px!important;
+}
