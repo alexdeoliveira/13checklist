@@ -1766,7 +1766,6 @@ textarea.form-control {
 
 .radio,
 .checkbox {
-  display: block;
   min-height: 20px;
   padding-left: 20px;
   margin-top: 10px;

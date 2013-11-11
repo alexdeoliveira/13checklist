@@ -1,76 +1,815 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>13checklist by alexdeoliveira</title>
-  </head>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen" />
+		<link rel="stylesheet" href="flat-ui/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="flat-ui/css/flat-ui.css">
+		<link rel="stylesheet" href="flat-ui/css/demo.css">
+		<link rel="stylesheet" href="stylesheets/pygment_trac.css" media="screen" />
+		<link rel="stylesheet" href="stylesheets/print.css" media="print" />
+		<!--[if lt IE 9]>
+	   	 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+		<title>13Checklist de Atividades para publicação de sites</title>
+	</head>
+	<body>
+		<header>
+			<h3 class="text-align-center titlemaster">13Checklist de Atividades para publicação de sites</h3>
+		</header>
+		<section class="col-md-4">
+			<h5>Conteúdo do Website</h5>
+			<ul class="list-unstyled">
+				<li class="list">
+					<label class="checkbox" for="informacoesempresa">
+						<input type="checkbox" id="informacoesempresa" name="tarefa" value="1" data-toggle="checkbox">
+						Informações da Empresa
+					</label>
+					<a class="fonticon" data-toggle="modal" data-target="#informacoesempresaModal"><i class="glyphicon glyphicon-plus"></i></a>
+				</li>
+			</ul>
+		</section>
+		<section class="col-md-4">
+			<h5>Recursos e Serviços do Site</h5>
+			<ul class="list-unstyled">
+				<li class="list">
+					<label class="checkbox" for="analytics">
+						<input type="checkbox" id="analytics" name="tarefa" value="1" data-toggle="checkbox">
+						Google Analytics
+					</label>
+					<a class="fonticon" data-toggle="modal" data-target="#analyticsModal"><i class="glyphicon glyphicon-plus"></i></a>
+				</li>
+				<li class="list">
+					<label class="checkbox" for="redessociais">
+						<input type="checkbox" id="redessociais" name="tarefa" value="1" data-toggle="checkbox">
+						Redes Sociais
+					</label>
+					<a class="fonticon" data-toggle="modal" data-target="#redessociaisModal"><i class="glyphicon glyphicon-plus"></i></a>
+				</li>
+				<li class="list">
+					<label class="checkbox" for="enviodeemail">
+						<input type="checkbox" id="enviodeemail" name="tarefa" value="1" data-toggle="checkbox">
+						Envio de e-mail
+					</label>
+					<a class="fonticon" data-toggle="modal" data-target="#enviodeemailModal"><i class="glyphicon glyphicon-plus"></i></a>
+				</li>
+			</ul>
+		</section>
+		<section class="col-md-4">
+			<h5>Funcionamento e Navegação do Site</h5>
+			<ul class="list-unstyled">
+				<li class="list">
+					<label class="checkbox" for="navegadores">
+						<input type="checkbox" id="navegadores" name="tarefa" value="1" data-toggle="checkbox">
+						Navegadores
+					</label>
+					<a class="fonticon" data-toggle="modal" data-target="#navegadoresModal"><i class="glyphicon glyphicon-plus"></i></a>
+				</li>
+				<li class="list">
+					<label class="checkbox" for="responsividade">
+						<input type="checkbox" id="responsividade" name="tarefa" value="1" data-toggle="checkbox">
+						Responsividade
+					</label>
+					<a class="fonticon" data-toggle="modal" data-target="#responsividadeModal"><i class="glyphicon glyphicon-plus"></i></a>
+				</li>
+				<li class="list">
+					<label class="checkbox" for="navegacaobasica">
+						<input type="checkbox" id="navegacaobasica" name="tarefa" value="1" data-toggle="checkbox">
+						Navegação básica, sem CSS e Javascript
+					</label>
+				</li>
+				<li class="list">
+					<label class="checkbox" for="navegacao">
+						<input type="checkbox" id="navegacao" name="tarefa" value="1" data-toggle="checkbox">
+						Navegação
+					</label>
+					<a class="fonticon" data-toggle="modal" data-target="#navegacaoModal"><i class="glyphicon glyphicon-plus"></i></a>
+				</li>
+				<li class="list">
+					<label class="checkbox" for="tamanhoevelocidade">
+						<input type="checkbox" id="tamanhoevelocidade" name="tarefa" value="1" data-toggle="checkbox">
+						Testar tamanho do site e velocidade de carregamento
+					</label>
+					<a class="fonticon" data-toggle="modal" data-target="#tamanhoevelocidadeModal"><i class="glyphicon glyphicon-plus"></i></a>
+				</li>
+				<li class="list">
+					<label class="checkbox" for="informacoesdecabecalho">
+						<input type="checkbox" id="informacoesdecabecalho" name="tarefa" value="1" data-toggle="checkbox">
+						Informações de Cabeçalho
+					</label>
+					<a class="fonticon" data-toggle="modal" data-target="#informacoesdecabecalhoModal"><i class="glyphicon glyphicon-plus"></i></a>
+				</li>
+			</ul>
+		</section>
+		<section class="col-md-4">
+			<h5>Codeigniter</h5>
+			<ul class="list-unstyled">
+				<li class="list">
+					<label class="checkbox" for="variaveisdosistema">
+						<input type="checkbox" id="variaveisdosistema" name="tarefa" value="1" data-toggle="checkbox">
+						Variáveis do sistema e banco de dados
+					</label>
+					<a class="fonticon" data-toggle="modal" data-target="#variaveisdosistemaModal"><i class="glyphicon glyphicon-plus"></i></a>
+				</li>
+			</ul>
+		</section>
+		<section class="col-md-4">
+			<h5>Hospedagem Locaweb</h5>
+			<ul class="list-unstyled">
+				<li class="list">
+					<label class="checkbox" for="htaccess">
+						<input type="checkbox" id="htaccess" name="tarefa" value="1" data-toggle="checkbox">
+						Arquivo .htaccess
+					</label>
+					<a class="fonticon" data-toggle="modal" data-target="#htaccessModal"><i class="glyphicon glyphicon-plus"></i></a>
+				</li>
+				<li class="list">
+					<label class="checkbox" for="phpini">
+						<input type="checkbox" id="phpini" name="tarefa" value="1" data-toggle="checkbox">
+						Arquivo PHP.ini
+					</label>
+					<a class="fonticon" data-toggle="modal" data-target="#phpiniModal"><i class="glyphicon glyphicon-plus"></i></a>
+				</li>
+			</ul>
+		</section>
+		<br clear="all" />
+		<hr>
+		<div id="downloads" class="clearfix pull-left col-md-7">
+				<a href="https://github.com/alexdeoliveira/13checklist/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+				<a href="https://github.com/alexdeoliveira/13checklist/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+				<a href="https://github.com/alexdeoliveira/13checklist" id="view-on-github" class="button"><span>View on GitHub</span></a>
+	        </div>
+			<button class="btn btn-danger margem-direita reset pull-right">Reset</button>
+		<footer>
+		</footer>
+		<script src="javascripts/jquery.js"></script>
+		<script src="javascripts/jquery.cookie.js"></script>
+		<script src="flat-ui/js/flatui-checkbox.js"></script>
+		<script src="flat-ui/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				set_name();
+				check();
 
-  <body>
-    <div id="container">
-      <div class="inner">
+				$('input[type=checkbox]').change(function(){
+					set($(this));
+				});
 
-        <header>
-          <h1>13checklist</h1>
-          <h2>Check list for web development</h2>
-        </header>
+				$('button.reset').click(function(){
+					reset();
+				});
+			});
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/alexdeoliveira/13checklist/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/alexdeoliveira/13checklist/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/alexdeoliveira/13checklist" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+			function set (el) {
+				if(el.is(':checked')) {
+					$.cookie(el.attr('name'), el.attr('value'));
+				} else {
+					$.removeCookie(el.attr('name'));
+				}
+			}
 
-        <hr>
+			function check () {
+				$('input[type=checkbox]').each(function(){
+					if($.cookie($(this).attr('name'))) {
+						$(this).attr('checked', true)
+							.parents('label').addClass('checked');
+					}
+				});
+			}
 
-        <section id="main_content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+			function reset () {
+				$('input[type=checkbox]')
+					.attr('checked', false)
+					.each(function(){
+						$.removeCookie($(this).attr('name'));
+					})
+					.parents('label').removeClass('checked');
+			}
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+			function set_name () {
+				var count = 1;
+				$('input[type=checkbox]').each(function(){
+					var name = $(this).attr('name')+count;
+					$(this).attr('name', name);
+					count++;
+				});
+			}
+		</script>
+		<div class="modal fade" id="informacoesempresaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Informações da Empresa</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="list-unstyled">
+							<li>
+								<h6>Verificar conteúdo repassado pela empresa ou existente em site ou material</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="criareconfigurar">
+											<input type="checkbox" id="criareconfigurar" name="tarefa" value="1" data-toggle="checkbox">
+											Criar e configurar páginas da empresa com o conteúdo disponível
+										</label>	
+									</li>
+									<li>
+										<label class="checkbox" for="adicionarimagens">
+											<input type="checkbox" id="adicionarimagens" name="tarefa" value="1" data-toggle="checkbox">
+											Adicionar imagens da empresa ou relacionadas
+										</label>	
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h6>Localização</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="configurarpagina">
+											<input type="checkbox" id="configurarpagina" name="tarefa" value="1" data-toggle="checkbox">
+											Configurar página com endereço completo
+										</label>	
+									</li>
+									<li>
+										<label class="checkbox" for="exibicaodomapa">
+											<input type="checkbox" id="exibicaodomapa" name="tarefa" value="1" data-toggle="checkbox">
+											Exibição do mapa conforme endereço da empresa
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="sepossivel">
+											<input type="checkbox" id="sepossivel" name="tarefa" value="1" data-toggle="checkbox">
+											Se possível exibir imagem da empresa com Google Street View
+										</label>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h6>Contato</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="configurarpaginacomtodas">
+											<input type="checkbox" id="configurarpaginacomtodas" name="tarefa" value="1" data-toggle="checkbox">
+											Configurar página com todas informações de contato
+										</label>
+										<ul>
+											<li>
+												<label class="checkbox" for="mail">
+													<input type="checkbox" id="mail" name="tarefa" value="1" data-toggle="checkbox">
+													Mail
+												</label>
+											</li>
+											<li>
+												<label class="checkbox" for="telefones">
+													<input type="checkbox" id="telefones" name="tarefa" value="1" data-toggle="checkbox">
+													Telefones
+												</label>
+											</li>
+											<li>
+												<label class="checkbox" for="redessociaiss">
+													<input type="checkbox" id="redessociaiss" name="tarefa" value="1" data-toggle="checkbox">
+													Redes Sociais
+												</label>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<label class="checkbox" for="testarfuncionamento">
+											<input type="checkbox" id="testarfuncionamento" name="tarefa" value="1" data-toggle="checkbox">
+											Testar funcionamento formulário de contato
+										</label>		
+										<ul>
+											<li>
+												<label class="checkbox" for="verificareconfiguraremail">
+													<input type="checkbox" id="verificareconfiguraremail" name="tarefa" value="1" data-toggle="checkbox">
+													Verificar e configurar e-mail de destino para envio de mensagens do sistema
+												</label>
+											</li>
+											<li>
+												<label class="checkbox" for="configuraremail">
+													<input type="checkbox" id="configuraremail" name="tarefa" value="1" data-toggle="checkbox">
+													Configurar e-mail no arquivo config1.php, variável:  $config['entidade_email_contato']
+												</label>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h6>Produtos e Serviços</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="adicionarregistros">
+											<input type="checkbox" id="adicionarregistros" name="tarefa" value="1" data-toggle="checkbox">
+											Adicionar registros dos produtos e serviços oferecidos pela empresa, caso não haver informações, adicionar itens relacionados.
+										</label>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h6>Notícias, Vídeos, Imagens, Links, Áudios, Agenda</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="adicionarconteudo">
+											<input type="checkbox" id="adicionarconteudo" name="tarefa" value="1" data-toggle="checkbox">
+											Adicionar conteúdo relacionado e relevante para os itens de conteúdo.
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="verificarexibicao">
+											<input type="checkbox" id="verificarexibicao" name="tarefa" value="1" data-toggle="checkbox">
+											Verificar exibição de informações de cada um dos itens de conteúdo, se todas informações estão sendo exibidas e de forma correta.
+										</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+		<!-- Modal -->
+		<div class="modal fade" id="analyticsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Recursos e Serviços do site</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="marg-left-20-">
+							<li>
+								<h6>Google Analytics</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="criarconta">
+											<input type="checkbox" id="criarconta" name="tarefa" value="1" data-toggle="checkbox">
+											Criar conta no Analytics ou utilizar conta existente
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="configurarcodigo">
+											<input type="checkbox" id="configurarcodigo" name="tarefa" value="1" data-toggle="checkbox">
+											Configurar código do Analytics no arquivo config1.php, variável: $config['ga_codigo'].
+										</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+		<!-- Modal -->
+		<div class="modal fade" id="redessociaisModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Recursos e Serviços do site</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="marg-left-20-">
+							<li>
+								<h6>Redes Sociais</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="testarbotoes">
+											<input type="checkbox" id="testarbotoes" name="tarefa" value="1" data-toggle="checkbox">
+											Testar botões de compartilhamento de conteúdo nas redes sociais
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="verificarenderecos">
+											<input type="checkbox" id="verificarenderecos" name="tarefa" value="1" data-toggle="checkbox">
+											Verificar endereços dos perfis das redes sociais
+										</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+		<!-- Modal -->
+		<div class="modal fade" id="enviodeemailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Recursos e Serviços do site</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="marg-left-20-">
+							<li>
+								<h6>Envio de e-mail</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="configurardados">
+											<input type="checkbox" id="configurardados" name="tarefa" value="1" data-toggle="checkbox">
+											Configurar dados de SMTP para envio de e-mail pelo sistema, no arquivo de configuração email.php.
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="utilizacaodeconta">
+											<input type="checkbox" id="utilizacaodeconta" name="tarefa" value="1" data-toggle="checkbox">
+											Utilização de conta exclusiva para envio de e-mail.
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="verificarseemail">
+											<input type="checkbox" id="verificarseemail" name="tarefa" value="1" data-toggle="checkbox">
+											Verificar se e-mail utilizado para envio é o mesmo que o remetente das mensagens enviadas.
+										</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+		<!-- Modal -->
+		<div class="modal fade" id="navegadoresModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Funcionamento e navegação do site</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="marg-left-20-">
+							<li>
+								<h6>Testar funcionamento em: diferentes dispositivos e navegadores</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="googlechrome">
+											<input type="checkbox" id="googlechrome" name="tarefa" value="1" data-toggle="checkbox">
+											Google Chrome
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="firefox">
+											<input type="checkbox" id="firefox" name="tarefa" value="1" data-toggle="checkbox">
+											Firefox
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="safari">
+											<input type="checkbox" id="safari" name="tarefa" value="1" data-toggle="checkbox">
+											Safari
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="opera">
+											<input type="checkbox" id="opera" name="tarefa" value="1" data-toggle="checkbox">
+											Opera
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="internetexplorer">
+											<input type="checkbox" id="internetexplorer" name="tarefa" value="1" data-toggle="checkbox">
+											Internet Explorer – a partir da versão 8
+										</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+		<!-- Modal -->
+		<div class="modal fade" id="responsividadeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Funcionamento e navegação do site</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="marg-left-20-">
+							<li>
+								<h6>Testar utilizando o serviço <a href="http://quirktools.com/screenfly">http://quirktools.com/screenfly</a></h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="tablet">
+											<input type="checkbox" id="tablet" name="tarefa" value="1" data-toggle="checkbox">
+											Tablet
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="mobile">
+											<input type="checkbox" id="mobile" name="tarefa" value="1" data-toggle="checkbox">
+											Mobile
+										</label>
+										<ul>
+											<li>
+												<label class="checkbox" for="samsungs4">
+													<input type="checkbox" id="samsungs4" name="tarefa" value="1" data-toggle="checkbox">
+													Iphone 5
+												</label>
+											</li>
+											<li>
+												<label class="checkbox" for="samsungs3">
+													<input type="checkbox" id="samsungs3" name="tarefa" value="1" data-toggle="checkbox">
+													Samsung S3/S4
+												</label>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<label class="checkbox" for="modohorizontalvertical">
+											<input type="checkbox" id="modohorizontalvertical" name="tarefa" value="1" data-toggle="checkbox">
+											Modo horizontal e vertical
+										</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+		<!-- Modal -->
+		<div class="modal fade" id="navegacaoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Funcionamento e navegação do site</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="marg-left-20-">
+							<li>
+								<h6>Navegação</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="paginadeerro">
+											<input type="checkbox" id="paginadeerro" name="tarefa" value="1" data-toggle="checkbox">
+											Configurar página de erros do site
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="verificartamanho">
+											<input type="checkbox" id="verificartamanho" name="tarefa" value="1" data-toggle="checkbox">
+											Verificar tamanho de imagens de fundo
+										</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+		<!-- Modal -->
+		<div class="modal fade" id="tamanhoevelocidadeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Funcionamento e navegação do site</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="marg-left-20-">
+							<li>
+								<h6>Testar tamanho do site e velocidade de carregamento</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="firebug">
+											<input type="checkbox" id="firebug" name="tarefa" value="1" data-toggle="checkbox">
+											Firebug
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="googlepagespeed">
+											<input type="checkbox" id="googlepagespeed" name="tarefa" value="1" data-toggle="checkbox">
+											Google Page Speed Tools - <a href="https://developers.google.com/speed/pagespeed/">https://developers.google.com/speed/pagespeed/</a>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="httparchive">
+											<input type="checkbox" id="httparchive" name="tarefa" value="1" data-toggle="checkbox">
+											HTTP Archive - <a href="http://httparchive.org">http://httparchive.org</a>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="webpage">
+											<input type="checkbox" id="webpage" name="tarefa" value="1" data-toggle="checkbox">
+											Web Page Test - <a href="http://www.webpagetest.org ">http://www.webpagetest.org </a>
+										</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+		<!-- Modal -->
+		<div class="modal fade" id="informacoesdecabecalhoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Funcionamento e navegação do site</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="marg-left-20-">
+							<li>
+								<h6>Informações de cabeçalho</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="prepararexibicaodosite">
+											<input type="checkbox" id="prepararexibicaodosite" name="tarefa" value="1" data-toggle="checkbox">
+											Preparar exibição do site para atalhos no Windows 8
+										</label>
+										<ul>
+											<li><a href="http://www.buildmypinnedsite.com/">http://www.buildmypinnedsite.com/</a></li>
+										</ul>
+									</li>
+									<li>
+										<label class="checkbox" for="configuracaodeicone">
+											<input type="checkbox" id="configuracaodeicone" name="tarefa" value="1" data-toggle="checkbox">
+											Configuração de ícone para equipamentos da Apples
+										</label>
+										<ul>
+											<li><a href="https://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">https://developer.apple.com/library/ios/#documentation/
+												AppleApplications/Reference/SafariWebContent/
+												ConfiguringWebApplications/
+												ConfiguringWebApplications.html</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+		<!-- Modal -->
+		<div class="modal fade" id="variaveisdosistemaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Codeigniter</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="marg-left-20-">
+							<li>
+								<h6>Variáveis do sistema e banco de dados</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="cpmfigphpbase">
+											<input type="checkbox" id="cpmfigphpbase" name="tarefa" value="1" data-toggle="checkbox">
+											Ajustar no arquivo config.php a variável $config['base_url'] com endereço de publicação do site.
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="conecaocombanco">
+											<input type="checkbox" id="conecaocombanco" name="tarefa" value="1" data-toggle="checkbox">
+											Configurar dados de conexão com Banco de Dados no arquivo database.php.
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="defineparaproduction">
+											<input type="checkbox" id="defineparaproduction" name="tarefa" value="1" data-toggle="checkbox">
+											Alterar o valor da constante Define para Production no arquivo index.php na raiz do site.
+										</label>
+									</li>
+									<li>
+										<label class="checkbox" for="ajustarvalor">
+											<input type="checkbox" id="ajustarvalor" name="tarefa" value="1" data-toggle="checkbox">
+											Ajustar valor da variável $config['assets_version'] em config1.php.
+										</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
+		<!-- Modal -->
+		<div class="modal fade" id="htaccessModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Hospedagem - Locaweb</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="marg-left-20-">
+							<li>
+								<h6>Arquivo .htaccess</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="php53">
+											<input type="checkbox" id="php53" name="tarefa" value="1" data-toggle="checkbox">
+											Ajustar arquivo para funcionamento do site com PHP 5.3:
+										</label>
+										<p class="color-cinza">
+											##### Suporte ao PHP 5.3 na Locaweb ##### <br>
+											AddHandler php53-script .php .php5 .php53 .pht .phtm .phtml <br>
+											suPHP_ConfigPath ~/ <br>
+											##### Suporte ao PHP 5.3 na Locaweb #####
+										</p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
-        <footer>
-          13checklist is maintained by <a href="https://github.com/alexdeoliveira">alexdeoliveira</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+		<!-- Modal -->
+		<div class="modal fade" id="phpiniModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Hospedagem - Locaweb</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="marg-left-20-">
+							<li>
+								<h6>PHP.ini</h6>
+								<ul>
+									<li>
+										<label class="checkbox" for="raizdaconta">
+											<input type="checkbox" id="raizdaconta" name="tarefa" value="1" data-toggle="checkbox">
+											Ajustar arquivo de configuração do PHP no diretório raiz da conta:
+										</label>
+										<p class="color-cinza">
+											extension_dir = "/usr/lib64/php53/modules/" <br>
+											;register_globals = On <br>
+											post_max_size = 106M <br>
+											memory_limit = 256M <br>
+											max_execution_time = 3600 <br>
+											upload_max_filesize = 105M <br>
+											;register_long_arrays = On <br>
+											max_input_time = 3600 <br>
+											date.timezone = "America/Sao_Paulo" <br>
+											allow_url_fopen = On
+										</p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
-        
-      </div>
-    </div>
-  </body>
+	</body>
 </html>
