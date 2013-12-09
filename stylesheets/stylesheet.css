@@ -1,15 +1,13 @@
 body {
 	background-color: #8A8A8A;
 }
-.text-align-center {
+header h1 {
 	text-align: center;
 }
-h3.titlemaster {
-	font-size: 30px;
-	color: #fff;
-	background: #bbb;
-	padding: .4em;
-	margin: .8em auto .2em auto;
+
+header h1 img {
+	height: 50px;
+	margin-top: -15px;
 }
 .margem-direita {
 	margin-right: 10px;
@@ -32,77 +30,77 @@ h6 {
 	color: #b8b8b8;
 }
 a.button {
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;                     
-  border-radius: 30px;
-  border-top: solid 1px #cbcbcb;
-  border-left: solid 1px #b7b7b7;
-  border-right: solid 1px #b7b7b7;
-  border-bottom: solid 1px #b3b3b3;
-  color: #303030;
-  line-height: 25px;
-  font-weight: bold;
-  font-size: 15px;
-  padding: 12px 8px 12px 8px;
-  width: 190px;
-  margin-right: 14px;  
-  background: #fdfdfd; /* Old browsers */
-  background: -moz-linear-gradient(top,  #fdfdfd 0%, #f2f2f2 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #fdfdfd 0%,#f2f2f2 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #fdfdfd 0%,#f2f2f2 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #fdfdfd 0%,#f2f2f2 100%); /* IE10+ */
-  background: linear-gradient(top,  #fdfdfd 0%,#f2f2f2 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
-  -webkit-box-shadow: 10px 10px 5px #888;
-  -moz-box-shadow: 10px 10px 5px #888;
-  box-shadow: 0px 1px 5px #e8e8e8;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;                     
+	border-radius: 30px;
+	border-top: solid 1px #cbcbcb;
+	border-left: solid 1px #b7b7b7;
+	border-right: solid 1px #b7b7b7;
+	border-bottom: solid 1px #b3b3b3;
+	color: #303030;
+	line-height: 25px;
+	font-weight: bold;
+	font-size: 15px;
+	padding: 12px 8px 12px 8px;
+	width: 190px;
+	margin-right: 14px;  
+	background: #fdfdfd; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fdfdfd 0%, #f2f2f2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fdfdfd 0%,#f2f2f2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fdfdfd 0%,#f2f2f2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fdfdfd 0%,#f2f2f2 100%); /* IE10+ */
+	background: linear-gradient(top,  #fdfdfd 0%,#f2f2f2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
+	-webkit-box-shadow: 10px 10px 5px #888;
+	-moz-box-shadow: 10px 10px 5px #888;
+	box-shadow: 0px 1px 5px #e8e8e8;
 }
 a.button:hover {
-  border-top: solid 1px #b7b7b7;
-  border-left: solid 1px #b3b3b3;
-  border-right: solid 1px #b3b3b3;
-  border-bottom: solid 1px #b3b3b3;
-  background: #fafafa; /* Old browsers */
-  background: -moz-linear-gradient(top,  #fdfdfd 0%, #f6f6f6 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #fdfdfd 0%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #fdfdfd 0%,#f6f6f6 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #fdfdfd 0%,#f6f6f6 100%); /* IE10+ */
-  background: linear-gradient(top,  #fdfdfd 0%,#f6f6f6, 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+	border-top: solid 1px #b7b7b7;
+	border-left: solid 1px #b3b3b3;
+	border-right: solid 1px #b3b3b3;
+	border-bottom: solid 1px #b3b3b3;
+	background: #fafafa; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fdfdfd 0%, #f6f6f6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fdfdfd 0%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fdfdfd 0%,#f6f6f6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fdfdfd 0%,#f6f6f6 100%); /* IE10+ */
+	background: linear-gradient(top,  #fdfdfd 0%,#f6f6f6, 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
 }
 a.button span {
-  padding-left: 50px;
-  height: 23px;
+	padding-left: 50px;
+	height: 23px;
 }
 #download-zip span {
-  background: transparent url(../images/zip-icon.png) 12px 50% no-repeat;
+	background: transparent url(../images/zip-icon.png) 12px 50% no-repeat;
 }
 #download-tar-gz span {
-  background: transparent url(../images/tar-gz-icon.png) 12px 50% no-repeat;
+	background: transparent url(../images/tar-gz-icon.png) 12px 50% no-repeat;
 }
 #view-on-github span {
-  background: transparent url(../images/octocat-icon.png) 12px 50% no-repeat;
+	background: transparent url(../images/octocat-icon.png) 12px 50% no-repeat;
 }
 #view-on-github {
-  margin-right: 0;
+	margin-right: 0;
 }
 hr {
-  height: 1px;
-  line-height: 1px;
-  margin-top: 1em;
-  padding-bottom: 1em;
-  border: none;
-  background: transparent url('../images/hr.png') 50% 0 no-repeat;
+	height: 1px;
+	line-height: 1px;
+	margin-top: 1em;
+	padding-bottom: 1em;
+	border: none;
+	background: transparent url('../images/hr.png') 50% 0 no-repeat;
 }
 
 .clearfix:after {
-  clear: both;
-  content: '.';
-  display: block;
-  visibility: hidden;
-  height: 0;
+	clear: both;
+	content: '.';
+	display: block;
+	visibility: hidden;
+	height: 0;
 }
 
 .clearfix {display: inline-block;}
@@ -120,12 +118,12 @@ hr {
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
-  #downloads {
-    margin-bottom: 25px;
-  }
-  #download-zip, #download-tar-gz {
-    display: none;
-  }
+	#downloads {
+		margin-bottom: 25px;
+	}
+	#download-zip, #download-tar-gz {
+		display: none;
+	}
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
