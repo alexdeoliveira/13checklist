@@ -9,6 +9,7 @@ header h1 img {
 	height: 50px;
 	margin-top: -15px;
 }
+
 .margem-direita {
 	margin-right: 10px;
 }
@@ -20,9 +21,7 @@ a.fonticon {
 	margin-left: 10px;
 	margin-top: -2px;
 }
-ul {
-	list-style: none;
-}
+
 h6 {
 	font-size: 18px!important;
 }
@@ -43,7 +42,6 @@ a.button {
 	font-size: 15px;
 	padding: 12px 8px 12px 8px;
 	width: 190px;
-	margin-right: 14px;  
 	background: #fdfdfd; /* Old browsers */
 	background: -moz-linear-gradient(top,  #fdfdfd 0%, #f2f2f2 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
@@ -55,6 +53,12 @@ a.button {
 	-webkit-box-shadow: 10px 10px 5px #888;
 	-moz-box-shadow: 10px 10px 5px #888;
 	box-shadow: 0px 1px 5px #e8e8e8;
+	display: block;
+	float: left;
+	margin: 28px 15px 0 0;
+}
+.reset {
+	margin-top: 33px;
 }
 a.button:hover {
 	border-top: solid 1px #b7b7b7;
@@ -106,6 +110,19 @@ hr {
 .clearfix {display: inline-block;}
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
+
+footer {
+	height: 100px;
+}
+
+div.progress {
+	height: 20px;
+}
+
+div.progress span {
+	text-align: center;
+	
+}
 
 /* #Media Queries
 ================================================== */
