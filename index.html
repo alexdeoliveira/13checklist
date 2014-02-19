@@ -1,975 +1,1014 @@
+
 <!DOCTYPE html>
 <html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta charset="utf-8">
-		<title>13checklist - Atividades para publicação de sites</title>
-		<meta name="description" content="Checklist para revisar o site antes de colocá-lo no ar">
-		<meta name="keywords" content="13 bits, checklist, português, desenvolvimento web">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="author" content="13 Bits">
-		<link rel="shortcut icon" href="images/favicon.ico">
-		<link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen" />
-		<link rel="stylesheet" href="flat-ui/bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" href="flat-ui/css/flat-ui.css">
-		<link rel="stylesheet" href="flat-ui/css/demo.css">
-		<link rel="stylesheet" href="stylesheets/pygment_trac.css" media="screen" />
-		<link rel="stylesheet" href="stylesheets/print.css" media="print" />
-		<!--[if lt IE 9]>
-	   	 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	    <![endif]-->
-	</head>
-	<body class="container">
-		<header>
-			<h1 class="text-align-center">
-				<img src="flat-ui/images/icons/svg/clipboard.svg" alt="Imagem de uma planilha">
-				13checklist
-			</h1>
-		</header>
+  <head>
+    <meta charset="utf-8">
+      <title>13checklist - Atividades para publicação de sites</title>
+      <meta name="description" content="Checklist para revisar o site antes de colocá-lo no ar">
+        <meta name="keywords" content="13 bits, checklist, português, desenvolvimento web">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="author" content="13 Bits">
+              <link rel="shortcut icon" href="images/favicon.ico">
+                <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen" />
+                <link rel="stylesheet" href="flat-ui/bootstrap/css/bootstrap.css">
+                  <link rel="stylesheet" href="flat-ui/css/flat-ui.css">
+                    <link rel="stylesheet" href="flat-ui/css/demo.css">
+                      <link rel="stylesheet" href="stylesheets/pygment_trac.css" media="screen" />
+                      <link rel="stylesheet" href="stylesheets/print.css" media="print" />
+                      <!--[if lt IE 9]>
+                         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                        <![endif]-->
+
+                      </head>
+                      <body class="container">
+                        <header>
+                          <h1 class="text-align-center">
+                            <img src="flat-ui/images/icons/svg/clipboard.svg" alt="Imagem de uma planilha">
+                              13checklist
+                          </h1>
+                        </header>
 
 
-		<div class="row">
-			<div class="col-md-12">
-				<div class="progress">
-					<div class="progress-bar"><span></span></div>
-				</div>
-			</div>
-		</div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="progress">
+                              <div class="progress-bar"><span></span></div>
+                            </div>
+                          </div>
+                        </div>
 
-		<div class="row">		
-			<section class="col-md-4">
-				<header>
-					<h5>Melhores práticas</h5>
-				</header>
-				<article>
-					<ul class="list-unstyled">
-						<li class="list">
-							<label for="linksquebrados" class="checkbox">
-								<input type="checkbox" id="linksquebrados" name="linksquebrados" value="1" data-toggle="checkbox">
-								Verificar se existe links quebrados
-							</label>
-							<a href="#" data-toggle="modal" data-target="#linksquebradosModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-						<li class="list">
-							<label for="gramatica" class="checkbox">
-								<input type="checkbox" id="gramatica" name="gramatica" value="1" data-toggle="checkbox">
-								Gramática e ortografia
-							</label>
-						</li>
-						<li class="list">
-							<label for="brownsers" class="checkbox">
-								<input type="checkbox" id="brownsers" name="brownsers" value="1" data-toggle="checkbox">
-								Testar em todos os brownsers
-							</label>
-							<a href="#" data-toggle="modal" data-target="#brownsersModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-					</ul>
-				</article>
-			</section>
+                        <form id="form"  action="conexao.php" method="POST">
+                          <div class="row">		
+                            <section class="col-md-4">
+                              <header>
+                                <h5>Melhores práticas</h5>
+                              </header>
+                              <article>
+                                <ul class="list-unstyled">
+                                  <li class="list">
+                                    <label for="linksquebrados" class="checkbox">
+                                      <input type="checkbox" id="linksquebrados" name="linksquebrados" value="0" data-toggle="checkbox">
+                                        Verificar se existe links quebrados
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#linksquebradosModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                  <li class="list">
+                                    <label for="gramatica" class="checkbox">
+                                      <input type="checkbox" id="gramatica" name="gramatica" value="0" data-toggle="checkbox">
+                                        Gramática e ortografia
+                                    </label>
+                                  </li>
+                                  <li class="list">
+                                    <label for="brownsers" class="checkbox">
+                                      <input type="checkbox" id="brownsers" name="brownsers" value="0" data-toggle="checkbox">
+                                        Testar em todos os brownsers
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#brownsersModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
 
-			<section class="col-md-4">
-				<header>
-					<h5>Mobile</h5>
-				</header>
-				<article>
-					<ul class="list-unstyled">
-						<li class="list">
-							<label for="responsividade" class="checkbox">
-								<input type="checkbox" id="responsividade" name="responsividade" value="1" data-toggle="checkbox">
-								Responsividade
-							</label>
-							<a href="#" data-toggle="modal" data-target="#responsividadeModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-						<li class="list">
-							<label for="headmobile" class="checkbox">
-								<input type="checkbox" id="headmobile" name="headmobile" value="1" data-toggle="checkbox">
-								Informações de cabeçalho
-							</label>
-							<a href="#" data-toggle="modal" data-target="#headmobileModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-					</ul>
-				</article>
-			</section>
+                            <section class="col-md-4">
+                              <header>
+                                <h5>Mobile</h5>
+                              </header>
+                              <article>
+                                <ul class="list-unstyled">
+                                  <li class="list">
+                                    <label for="responsividade" class="checkbox">
+                                      <input type="checkbox" id="responsividade" name="responsividade" value="0" data-toggle="checkbox">
+                                        Responsividade
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#responsividadeModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                  <li class="list">
+                                    <label for="headmobile" class="checkbox">
+                                      <input type="checkbox" id="headmobile" name="headmobile" value="0" data-toggle="checkbox">
+                                        Informações de cabeçalho
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#headmobileModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
 
-			<section class="col-md-4">
-				<header>
-					<h5>Analytics</h5>
-				</header>
-				<article>
-					<ul class="list-unstyled">
-						<li class="list">
-							<label for="trafego" class="checkbox">
-								<input type="checkbox" id="trafego" name="trafego" value="1" data-toggle="checkbox">
-								Monitoramento de tráfego
-							</label>
-							<a href="#" data-toggle="modal" data-target="#trafegoModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-						<li class="list">
-							<label for="up" class="checkbox">
-								<input type="checkbox" id="up" name="up" value="1" data-toggle="checkbox">
-								Monitoramento de uptime
-							</label>
-							<a href="#" data-toggle="modal" data-target="#upModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-					</ul>
-				</article>
-			</section>
-		</div>
+                            <section class="col-md-4">
+                              <header>
+                                <h5>Analytics</h5>
+                              </header>
+                              <article>
+                                <ul class="list-unstyled">
+                                  <li class="list">
+                                    <label for="trafego" class="checkbox">
+                                      <input type="checkbox" id="trafego" name="trafego" value="0" data-toggle="checkbox">
+                                        Monitoramento de tráfego
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#trafegoModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                  <li class="list">
+                                    <label for="up" class="checkbox">
+                                      <input type="checkbox" id="up" name="up" value="0" data-toggle="checkbox">
+                                        Monitoramento de uptime
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#upModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
+                          </div>
 
-		<div class="row">
-			<section class="col-md-4">
-				<header>
-					<h5>Performance</h5>
-				</header>
-				<article>
-					<ul class="list-unstyled">
-						<li class="list">
-							<label for="speed" class="checkbox">
-								<input type="checkbox" id="speed" name="speed" value="1" data-toggle="checkbox">
-								Google Speed
-							</label>
-							<a href="#" data-toggle="modal" data-target="#speedModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-						<li class="list">
-							<label for="yslow" class="checkbox">
-								<input type="checkbox" id="yslow" name="yslow" value="1" data-toggle="checkbox">
-								Yslow
-							</label>
-							<a href="#" data-toggle="modal" data-target="#yslowModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-					</ul>
-				</article>
-			</section>
+                          <div class="row">
+                            <section class="col-md-4">
+                              <header>
+                                <h5>Performance</h5>
+                              </header>
+                              <article>
+                                <ul class="list-unstyled">
+                                  <li class="list">
+                                    <label for="speed" class="checkbox">
+                                      <input type="checkbox" id="speed" name="speed" value="0" data-toggle="checkbox">
+                                        Google Speed
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#speedModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                  <li class="list">
+                                    <label for="yslow" class="checkbox">
+                                      <input type="checkbox" id="yslow" name="yslow" value="0" data-toggle="checkbox">
+                                        Yslow
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#yslowModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
 
-			<section class="col-md-4">
-				<header>
-					<h5>Usabilidade</h5>
-				</header>
-				<article>
-					<ul class="list-unstyled">
-						<li class="list">
-							<label for="favicon" class="checkbox">
-								<input type="checkbox" id="favicon" name="favicon" value="1" data-toggle="checkbox">
-								Criar favicon
-							</label>
-							<a href="#" data-toggle="modal" data-target="#faviconModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-						<li class="list">
-							<label for="erro404" class="checkbox">
-								<input type="checkbox" id="erro404" name="erro404" value="1" data-toggle="checkbox">
-								Customizar páginas de erro 404
-							</label>
-						</li>
+                            <section class="col-md-4">
+                              <header>
+                                <h5>Usabilidade</h5>
+                              </header>
+                              <article>
+                                <ul class="list-unstyled">
+                                  <li class="list">
+                                    <label for="favicon" class="checkbox">
+                                      <input type="checkbox" id="favicon" name="favicon" value="0" data-toggle="checkbox">
+                                        Criar favicon
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#faviconModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                  <li class="list">
+                                    <label for="erro404" class="checkbox">
+                                      <input type="checkbox" id="erro404" name="erro404" value="0" data-toggle="checkbox">
+                                        Customizar páginas de erro 404
+                                    </label>
+                                  </li>
 
-						<li class="list">
-							<label for="erro403" class="checkbox">
-								<input type="checkbox" id="erro403" name="erro403" value="1" data-toggle="checkbox">
-								Customizar páginas de acesso negado 403
-							</label>
-						</li>
-					</ul>
-				</article>
-			</section>
+                                  <li class="list">
+                                    <label for="erro403" class="checkbox">
+                                      <input type="checkbox" id="erro403" name="erro403" value="0" data-toggle="checkbox">
+                                        Customizar páginas de acesso negado 403
+                                    </label>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
 
-			<section class="col-md-4">
-				<header>
-					<h5>Semântica</h5>
-				</header>
-				<article>
-					<ul class="list-unstyled">
-						<li class="list">
-							<label for="semantica" class="checkbox">
-								<input type="checkbox" id="semantica" name="semantica" value="1" data-toggle="checkbox">
-								Checar semântica
-							</label>
-							<a href="#" data-toggle="modal" data-target="#semanticaModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-					</ul>
-				</article>
-			</section>
-		</div>
+                            <section class="col-md-4">
+                              <header>
+                                <h5>Semântica</h5>
+                              </header>
+                              <article>
+                                <ul class="list-unstyled">
+                                  <li class="list">
+                                    <label for="semantica" class="checkbox">
+                                      <input type="checkbox" id="semantica" name="semantica" value="0" data-toggle="checkbox">
+                                        Checar semântica
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#semanticaModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
+                          </div>
 
-		<div class="row">
-			<section class="col-md-4">
-				<header>
-					<h5>SEO</h5>
-				</header>
-				<article>
-					<ul class="list-unstyled">
-						<li class="list">
-							<label for="googlewebmasters" class="checkbox">
-								<input type="checkbox" id="googlewebmasters" name="googlewebmasters" value="1" data-toggle="checkbox">
-								Google para webmasters
-							</label>
-							<a href="#" data-toggle="modal" data-target="#googlewebmastersModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-						<li class="list">
-							<label for="robots" class="checkbox">
-								<input type="checkbox" id="robots" name="robots" value="1" data-toggle="checkbox">
-								robots.txt
-							</label>
-							<a href="#" data-toggle="modal" data-target="#robotsModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-						<li class="list">
-							<label for="sitemap" class="checkbox">
-								<input type="checkbox" id="sitemap" name="sitemap" value="1" data-toggle="checkbox">
-								XML sitemap
-							</label>
-							<a href="#" data-toggle="modal" data-target="#sitemapModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-					</ul>
-				</article>
-			</section>
+                          <div class="row">
+                            <section class="col-md-4">
+                              <header>
+                                <h5>SEO</h5>
+                              </header>
+                              <article>
+                                <ul class="list-unstyled">
+                                  <li class="list">
+                                    <label for="googlewebmasters" class="checkbox">
+                                      <input type="checkbox" id="googlewebmasters" name="googlewebmasters" value="0" data-toggle="checkbox">
+                                        Google para webmasters
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#googlewebmastersModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                  <li class="list">
+                                    <label for="robots" class="checkbox">
+                                      <input type="checkbox" id="robots" name="robots" value="0" data-toggle="checkbox">
+                                        robots.txt
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#robotsModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                  <li class="list">
+                                    <label for="sitemap" class="checkbox">
+                                      <input type="checkbox" id="sitemap" name="sitemap" value="0" data-toggle="checkbox">
+                                        XML sitemap
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#sitemapModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
 
-			<section class="col-md-4">
-				<header>
-					<h5>Qualidade de código</h5>
-				</header>
-				<article>
-					<ul class="list-unstyled">
-						<li class="list">
-							<label for="htmlvalidate" class="checkbox">
-								<input type="checkbox" id="htmlvalidate" name="htmlvalidate" value="1" data-toggle="checkbox">
-								Validador HTML
-							</label>
-							<a href="#" data-toggle="modal" data-target="#htmlvalidateModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-						<li class="list">
-							<label for="cssvalidate" class="checkbox">
-								<input type="checkbox" id="cssvalidate" name="cssvalidate" value="1" data-toggle="checkbox">
-								Validador CSS
-							</label>
-							<a href="#" data-toggle="modal" data-target="#cssvalidateModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-					</ul>
-				</article>
-			</section>
+                            <section class="col-md-4">
+                              <header>
+                                <h5>Qualidade de código</h5>
+                              </header>
+                              <article>
+                                <ul class="list-unstyled">
+                                  <li class="list">
+                                    <label for="htmlvalidate" class="checkbox">
+                                      <input type="checkbox" id="htmlvalidate" name="htmlvalidate" value="0" data-toggle="checkbox">
+                                        Validador HTML
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#htmlvalidateModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                  <li class="list">
+                                    <label for="cssvalidate" class="checkbox">
+                                      <input type="checkbox" id="cssvalidate" name="cssvalidate" value="0" data-toggle="checkbox">
+                                        Validador CSS
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#cssvalidateModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
 
-			<section class="col-md-4">
-				<header>
-					<h5>Acessibilidade</h5>
-				</header>
-				<article>
-					<ul class="list-unstyled">
-						<li class="list">
-							<label for="colorcontrast" class="checkbox">
-								<input type="checkbox" id="colorcontrast" name="colorcontrast" value="1" data-toggle="checkbox">
-								Contraste de cores
-							</label>
-							<a href="#" data-toggle="modal" data-target="#colorcontrastModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-						<li class="list">
-							<label for="wcag" class="checkbox">
-								<input type="checkbox" id="wcag" name="wcag" value="1" data-toggle="checkbox">
-								Validação WCAG2 e Contraste de cor
-							</label>
-							<a href="#" data-toggle="modal" data-target="#wcagModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-					</ul>
-				</article>
-			</section>
-		</div>
+                            <section class="col-md-4">
+                              <header>
+                                <h5>Acessibilidade</h5>
+                              </header>
+                              <article>
+                                <ul class="list-unstyled">
+                                  <li class="list">
+                                    <label for="colorcontrast" class="checkbox">
+                                      <input type="checkbox" id="colorcontrast" name="colorcontrast" value="0" data-toggle="checkbox">
+                                        Contraste de cores
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#colorcontrastModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                  <li class="list">
+                                    <label for="wcag" class="checkbox">
+                                      <input type="checkbox" id="wcag" name="wcag" value="0" data-toggle="checkbox">
+                                        Validação WCAG2 e Contraste de cor
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#wcagModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
+                          </div>
 
-		<div class="row">
-			<section class="col-md-4">
-				<header>
-					<h5>Segurança</h5>
-				</header>
-				<article>
-					<ul class="list-unstyled">
-						<li class="list">
-							<label for="captcha" class="checkbox">
-								<input type="checkbox" id="captcha" name="captcha" value="1" data-toggle="checkbox">
-								Captcha
-							</label>
-							<a href="#" data-toggle="modal" data-target="#captchaModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-						<li class="list">
-							<label for="emails" class="checkbox">
-								<input type="checkbox" id="emails" name="emails" value="1" data-toggle="checkbox">
-								Link dos e-mails protegidos
-							</label>
-							<a href="#" data-toggle="modal" data-target="#emailsModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-					</ul>
-				</article>
-			</section>
+                          <div class="row">
+                            <section class="col-md-4">
+                              <header>
+                                <h5>Segurança</h5>
+                              </header>
+                              <article>
+                                <ul class="list-unstyled">
+                                  <li class="list">
+                                    <label for="captcha" class="checkbox">
+                                      <input type="checkbox" id="captcha" name="captcha" value="0" data-toggle="checkbox">
+                                        Captcha
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#captchaModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                  <li class="list">
+                                    <label for="emails" class="checkbox">
+                                      <input type="checkbox" id="emails" name="emails" value="0" data-toggle="checkbox">
+                                        Link dos e-mails protegidos
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#emailsModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
 
-			<section class="col-md-4">
-				<header>
-					<h5>Mídias Sociais</h5>
-				</header>
-				<article>
-					<ul class="list-unstyled">
-						<li class="list">
-							<label for="opengraph" class="checkbox">
-								<input type="checkbox" id="opengraph" name="opengraph" value="1" data-toggle="checkbox">
-								Protocolo Open Graph
-							</label>
-							<a href="#" data-toggle="modal" data-target="#opengraphModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-						<li class="list">
-							<label for="twitter" class="checkbox">
-								<input type="checkbox" id="twitter" name="twitter" value="1" data-toggle="checkbox">
-								Twitter Cards
-							</label>
-							<a href="#" data-toggle="modal" data-target="#twitterModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-						<li class="list">
-							<label for="facebook" class="checkbox">
-								<input type="checkbox" id="facebook" name="facebook" value="1" data-toggle="checkbox">
-								Facebook
-							</label>
-							<a href="#" data-toggle="modal" data-target="#facebookModal" class="fonticon">
-								<i class="glyphicon glyphicon-plus"></i>
-							</a>
-						</li>
-					</ul>
-				</article>
-			</section>
+                            <section class="col-md-4">
+                              <header>
+                                <h5>Mídias Sociais</h5>
+                              </header>
+                              <article>
+                                <ul class="list-unstyled">
+                                  <li class="list">
+                                    <label for="opengraph" class="checkbox">
+                                      <input type="checkbox" id="opengraph" name="opengraph" value="0" data-toggle="checkbox">
+                                        Protocolo Open Graph
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#opengraphModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                  <li class="list">
+                                    <label for="twitter" class="checkbox">
+                                      <input type="checkbox" id="twitter" name="twitter" value="0" data-toggle="checkbox">
+                                        Twitter Cards
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#twitterModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                  <li class="list">
+                                    <label for="facebook" class="checkbox">
+                                      <input type="checkbox" id="facebook" name="facebook" value="0" data-toggle="checkbox">
+                                        Facebook
+                                    </label>
+                                    <a href="#" data-toggle="modal" data-target="#facebookModal" class="fonticon">
+                                      <i class="glyphicon glyphicon-plus"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
 
-			<section class="col-md-4">
-				<h5>Backend</h5>
-				<ul class="list-unstyled">
-					<li class="list">
-						<label class="checkbox" for="codeigniter">
-							<input type="checkbox" id="codeigniter" name="tarefa" value="1" data-toggle="checkbox">
-							Codeigniter
-						</label>
-						<a href="#" class="fonticon" data-toggle="modal" data-target="#codeigniterModal"><i class="glyphicon glyphicon-plus"></i></a>
-					</li>
-				</ul>
-			</section>
+                            <section class="col-md-4">
+                              <h5>Backend</h5>
+                              <ul class="list-unstyled">
+                                <li class="list">
+                                  <label class="checkbox" for="codeigniter">
+                                    <input type="checkbox" id="codeigniter" name="tarefa" value="0" data-toggle="checkbox">
+                                      Codeigniter
+                                  </label>
+                                  <a href="#" class="fonticon" data-toggle="modal" data-target="#codeigniterModal"><i class="glyphicon glyphicon-plus"></i></a>
+                                </li>
+                              </ul>
+                            </section>
 
-			<section class="col-md-4">
-				<h5>Hospedagem</h5>
-				<ul class="list-unstyled">
-					<li class="list">
-						<label class="checkbox" for="locaweb">
-							<input type="checkbox" id="locaweb" name="tarefa" value="1" data-toggle="checkbox">
-							Locaweb
-						</label>
-						<a href="#" class="fonticon" data-toggle="modal" data-target="#locawebModal"><i class="glyphicon glyphicon-plus"></i></a>
-					</li>
-				</ul>
-			</section>
-		</div>
+                            <section class="col-md-4">
+                              <h5>Hospedagem</h5>
+                              <ul class="list-unstyled">
+                                <li class="list">
+                                  <label class="checkbox" for="locaweb">
+                                    <input type="checkbox" id="locaweb" name="locaweb" value="0" data-toggle="checkbox">
+                                      Locaweb
+                                  </label>
+                                  <a href="#" class="fonticon" data-toggle="modal" data-target="#locawebModal"><i class="glyphicon glyphicon-plus"></i></a>
+                                </li>
+                              </ul>
+                            </section>
+                          </div>
+                        </form>
+                        <footer class="row">
+                          <div id="downloads" class="clearfix pull-left col-md-8">
+                            <a href="https://github.com/alexdeoliveira/13checklist/archive/gh-pages.zip" id="download-zip" class="button"><span>Download .zip</span></a>
+                            <a href="https://github.com/alexdeoliveira/13checklist/archive/gh-pages.tar.gz" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+                            <a href="https://github.com/alexdeoliveira/13checklist" id="view-on-github" class="button"><span>View on GitHub</span></a>
+                          </div>
+                          <button class="btn btn-default margem-direita reset pull-right">Resetar</button>
+                          <button class="btn btn-default margem-direita salvar  pull-right">Salvar</button>
+                        </footer>
+                        <script src="javascripts/jquery.js"></script>
+                        <script src="javascripts/jquery.cookie.js"></script>
+                        <script src="flat-ui/js/flatui-checkbox.js"></script>
+                        <script src="flat-ui/js/bootstrap.min.js"></script>
+                        <script>
+                          $(window).load(function() {
+                            
+                            //SALVANDO OS DADOS
+                            $('.salvar').click(function(ev) {
+                              
+                              
+                              $.ajax({
+                                type: 'POST',
+                                url: "conexao.php",
+                                dataType: "html",
+                                data:  $("#form").serializeArray(),
+                                success: function(retorno) {
+                                  console.log(retorno);
+                                  alert("Salvo com sucesso");
+                                }
 
-		<footer class="row">
-			<div id="downloads" class="clearfix pull-left col-md-8">
-				<a href="https://github.com/alexdeoliveira/13checklist/archive/gh-pages.zip" id="download-zip" class="button"><span>Download .zip</span></a>
-				<a href="https://github.com/alexdeoliveira/13checklist/archive/gh-pages.tar.gz" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-				<a href="https://github.com/alexdeoliveira/13checklist" id="view-on-github" class="button"><span>View on GitHub</span></a>
-	        </div>
-			<button class="btn btn-default margem-direita reset pull-right">Resetar</button>
-		</footer>
-		<script src="javascripts/jquery.js"></script>
-		<script src="javascripts/jquery.cookie.js"></script>
-		<script src="flat-ui/js/flatui-checkbox.js"></script>
-		<script src="flat-ui/js/bootstrap.min.js"></script>
-		<script>
-			$(document).ready(function(){
+                              });
 
-				
-				set_name();
-				check();
+                            })
 
-				$('input[type=checkbox]').change(function(){
-					set($(this));
-				});
+                            $('input[type=checkbox]').change(function() {
+                              set($(this));
+                            });
 
-				$('button.reset').click(function(){
-					reset();
-				});
-			});
+                            $('button.reset').click(function() {
+                              reset();
+                              
+                               $.ajax({
+                              url: "conexao.php?reset=reset",
+                              dataType: "html",
+                              success: function(succeed) {
+                                alert("Operação realizada com sucesso");
+                                progress_bar();
+                              }
+                            });
+                              
+                              
+                            });
+                            //CARREGANDO O FORMULARIO COM OS DADOS DO BANCO
+                            $.ajax({
+                              url: "conexao.php?dados=dados",
+                              dataType: "html",
+                              success: function(dados) {
+                                console.log(dados);
+                                dadosform = $.parseJSON(dados);
+                                
+                                $.each(dadosform, function(nomecampo, valor) {
+                                  $("input[name=" + nomecampo + "]").attr('value', parseInt(valor));
+                                  $("input[name=" + nomecampo + "]").prop('checked', true).parents('label').addClass('checked');
+                                })
+                                progress_bar();
+                              },
+                            });
 
-			function set (el) {
-				if(el.is(':checked')) {
-					$.cookie(el.attr('name'), el.attr('value'));
-				} else {
-					$.removeCookie(el.attr('name'));
-				}
-				progress_bar();
-			}
 
-			function check () {
-				$('input[type=checkbox]').each(function(){
-					if($.cookie($(this).attr('name'))) {
-						$(this).attr('checked', true)
-							.parents('label').addClass('checked');
-					}
-				});
-				progress_bar();
-			}
 
-			function reset () {
-				$('input[type=checkbox]')
-					.attr('checked', false)
-					.each(function(){
-						$.removeCookie($(this).attr('name'));
-					})
-					.parents('label').removeClass('checked');
 
-					progress_bar();
-			}
 
-			function set_name () {
-				var count = 1;
-				$('input[type=checkbox]').each(function(){
-					var name = $(this).attr('name')+count;
-					$(this).attr('name', name);
-					count++;
-				});
-			}
 
-			function progress_bar () {
-				var total = $('input[type=checkbox]').length;
-				var checked = $('input[type=checkbox]:checked').length;
-				var result = checked;
-				if (result != 0) {
-					result = (checked*100)/total;
-				};
-				$('.progress-bar').css('width', result+'%')
-					.find('span').html(parseInt(result)+'% ('+checked+'/'+total+')');
-			}
-		</script>
-		
-		<div class="modal fade" id="linksquebradosModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramentas</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://validator.w3.org/checklink" target="blank">W3C link checker</a></li>
-							<li><a href="http://iwebtool.com/broken_link_checker" target="blank">iWebTool Broken Link Checker</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                          });
 
-		<div class="modal fade" id="brownsersModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Brownsers</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li>Chrome</li>
-							<li>Firefox</li>
-							<li>IE7+</li>
-							<li>Opera</li>
-							<li>Safari</li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                          function set(el) {
+                            if (el.is(':checked')) {
+                              el.attr('value', "1");
+                            } else {
+                              el.attr('value', "0");
+                            }
+                            progress_bar();
+                          }
 
-		<div class="modal fade" id="responsividadeModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramenta</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li>Testar utilizando o serviço <a href="http://quirktools.com/screenfly" target="blank">http://quirktools.com/screenfly</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
 
-		<div class="modal fade" id="headmobileModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramentas</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://www.buildmypinnedsite.com" target="blank">Preparar exibição do site para atalhos no Windows 8</a></li>
-							<li><a href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html" target="blank">Configuração de ícone para equipamentos da Apple</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
 
-		<div class="modal fade" id="trafegoModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramentas</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://www.google.com/analytics/" target="blank">Google Analytics</a></li>
-							<li><a href="http://statcounter.com/" target="blank">StatCounter</a></li>
-							<li><a href="http://clicky.com/" target="blank">Clicky</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                          function reset() {
+                            $('input[type=checkbox]').attr('checked', false).parents('label').removeClass('checked');
 
-		<div class="modal fade" id="upModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramentas</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li>Zabbix</li>
-							<li><a href="http://uptimerobot.com/" target="blank">Uptime Robot</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                            progress_bar();
+                          }
 
-		<div class="modal fade" id="speedModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramenta</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="https://developers.google.com/speed/pagespeed/" target="blank">Google Page Speed</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                          function set_name() {
+                            var count = 1;
+                            $('input[type=checkbox]').each(function() {
+                              var name = $(this).attr('name') + count;
+                              $(this).attr('name', name);
+                              count++;
+                            });
 
-		<div class="modal fade" id="yslowModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramenta</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://yslow.org/" target="blank">Yahoo's YSlow</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                          }
 
-		<div class="modal fade" id="faviconModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramentas</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://www.xiconeditor.com/" target="blank">X-Icon Editor</a></li>
-							<li><a href="http://tools.dynamicdrive.com/favicon/" target="blank">Dynamic Drive - Favicon Generator</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                          function progress_bar() {
+                            var total = $('input[type=checkbox]').length;
+                            var checked = $('input[type=checkbox]:checked').length;
+                            var result = checked;
 
-		<div class="modal fade" id="semanticaModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramenta</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://www.w3.org/2003/12/semantic-extractor.html" target="blank">W3C semantic extractor</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                            if (result != 0) {
+                              result = (checked * 100) / total;
+                            }
+                            ;
+                            $('.progress-bar').css('width', result + '%').find('span').html(parseInt(result) + '% (' + checked + '/' + total + ')');
+                          }
+                        </script>
 
-		<div class="modal fade" id="googlewebmastersModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Link</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://www.google.com/webmasters/" target="blank">Google Webmasters</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="linksquebradosModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramentas</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://validator.w3.org/checklink" target="blank">W3C link checker</a></li>
+                                  <li><a href="http://iwebtool.com/broken_link_checker" target="blank">iWebTool Broken Link Checker</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-		<div class="modal fade" id="robotsModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramentas</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://tools.seobook.com/robots-txt/" target="blank">Tutorial</a></li>
-							<li><a href="http://www.robotsgenerator.com/" target="blank">Criar online</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="brownsersModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Brownsers</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li>Chrome</li>
+                                  <li>Firefox</li>
+                                  <li>IE7+</li>
+                                  <li>Opera</li>
+                                  <li>Safari</li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-		<div class="modal fade" id="sitemapModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramenta</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://www.xml-sitemaps.com/" target="blank">XML Sitemap</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="responsividadeModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramenta</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li>Testar utilizando o serviço <a href="http://quirktools.com/screenfly" target="blank">http://quirktools.com/screenfly</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-		<div class="modal fade" id="htmlvalidateModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramenta</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://validator.w3.org/" target="blank">W3C HTML validator</a></li>
-							<li><a href="http://watson.addy.com/" target="blank">Dr. Watson</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="headmobileModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramentas</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://www.buildmypinnedsite.com" target="blank">Preparar exibição do site para atalhos no Windows 8</a></li>
+                                  <li><a href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html" target="blank">Configuração de ícone para equipamentos da Apple</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-		<div class="modal fade" id="cssvalidateModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramenta</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://jigsaw.w3.org/css-validator/" target="blank">W3C CSS validator</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="trafegoModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramentas</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://www.google.com/analytics/" target="blank">Google Analytics</a></li>
+                                  <li><a href="http://statcounter.com/" target="blank">StatCounter</a></li>
+                                  <li><a href="http://clicky.com/" target="blank">Clicky</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-		<div class="modal fade" id="colorcontrastModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramenta</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://www.checkmycolours.com/" target="blank">CheckMyColours</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="upModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramentas</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li>Zabbix</li>
+                                  <li><a href="http://uptimerobot.com/" target="blank">Uptime Robot</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-		<div class="modal fade" id="wcagModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramentas</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://www.acessibilidade.gov.pt/accessmonitor/" target="blank">Validação WCAG 2</a></li>
-							<li><a href="http://wave.webaim.org/" target="blank">Validação WCAG 2 e Contraste de cor</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="speedModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramenta</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="https://developers.google.com/speed/pagespeed/" target="blank">Google Page Speed</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-		<div class="modal fade" id="captchaModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Ferramentas</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://www.google.com/recaptcha" target="blank">Recaptcha</a></li>
-							<li><a href="http://ellislab.com/codeigniter/user-guide/helpers/captcha_helper.html" target="blank">Codeigniter - Captcha Helper</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="yslowModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramenta</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://yslow.org/" target="blank">Yahoo's YSlow</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-		<div class="modal fade" id="emailsModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Link</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://ellislab.com/codeigniter/user-guide/helpers/url_helper.html" target="blank">safe_mailto()</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="faviconModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramentas</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://www.xiconeditor.com/" target="blank">X-Icon Editor</a></li>
+                                  <li><a href="http://tools.dynamicdrive.com/favicon/" target="blank">Dynamic Drive - Favicon Generator</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-		<div class="modal fade" id="opengraphModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Link</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="http://ogp.me/" target="blank">Open Graph</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="semanticaModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramenta</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://www.w3.org/2003/12/semantic-extractor.html" target="blank">W3C semantic extractor</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-		<div class="modal fade" id="twitterModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Link</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="https://dev.twitter.com/docs/cards/preview" target="blank">Twitter cards</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="googlewebmastersModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Link</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://www.google.com/webmasters/" target="blank">Google Webmasters</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-		<div class="modal fade" id="facebookModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Link</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li><a href="https://developers.facebook.com/docs/plugins/" target="blank">Social Plugins</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="robotsModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramentas</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://tools.seobook.com/robots-txt/" target="blank">Tutorial</a></li>
+                                  <li><a href="http://www.robotsgenerator.com/" target="blank">Criar online</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-		<div class="modal fade" id="codeigniterModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Informações</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li>Ajustar no arquivo "config.php" a variável "$config['base_url']" com endereço de publicação do site.</li>
-							<li>Configurar dados de conexão com Banco de Dados no arquivo "database.php".</li>
-							<li>Alterar o valor da constante Define para "Production" no arquivo "index.php" na raiz do site.</li>
-							<li>Ajustar valor da variável "$config['assets_version']" em "config1.php".</li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="sitemapModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramenta</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://www.xml-sitemaps.com/" target="blank">XML Sitemap</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-		<div class="modal fade" id="locawebModal" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h6 class="modal-title">Informações</h6>
-					</div>
-					<div class="modal-body">
-						<ul>
-							<li>Ajustar arquivo ".htaccess" para funcionamento do site com PHP 5.3: <br>
-								<span class="color-cinza">
-									##### Suporte ao PHP 5.3 na Locaweb ##### 
-									AddHandler php53-script .php .php5 .php53 .pht .phtm .phtml
-									suPHP_ConfigPath ~/ 
-									##### Suporte ao PHP 5.3 na Locaweb #####
-								</span>
-							</li>
+                        <div class="modal fade" id="htmlvalidateModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramenta</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://validator.w3.org/" target="blank">W3C HTML validator</a></li>
+                                  <li><a href="http://watson.addy.com/" target="blank">Dr. Watson</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-							<li>
-								Ajustar arquivo "php.ini" no diretório raiz da conta: <br>
-								<span class="color-cinza">
-									extension_dir = "/usr/lib64/php53/modules/" 
-									;register_globals = On 
-									post_max_size = 106M 
-									memory_limit = 256M 
-									max_execution_time = 3600 
-									upload_max_filesize = 105M 
-									;register_long_arrays = On 
-									max_input_time = 3600 
-									date.timezone = "America/Sao_Paulo" 
-									allow_url_fopen = On
-								</span>
-							</li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+                        <div class="modal fade" id="cssvalidateModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramenta</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://jigsaw.w3.org/css-validator/" target="blank">W3C CSS validator</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
-	</body>
-</html>
+                        <div class="modal fade" id="colorcontrastModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramenta</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://www.checkmycolours.com/" target="blank">CheckMyColours</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade" id="wcagModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramentas</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://www.acessibilidade.gov.pt/accessmonitor/" target="blank">Validação WCAG 2</a></li>
+                                  <li><a href="http://wave.webaim.org/" target="blank">Validação WCAG 2 e Contraste de cor</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade" id="captchaModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Ferramentas</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://www.google.com/recaptcha" target="blank">Recaptcha</a></li>
+                                  <li><a href="http://ellislab.com/codeigniter/user-guide/helpers/captcha_helper.html" target="blank">Codeigniter - Captcha Helper</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade" id="emailsModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Link</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://ellislab.com/codeigniter/user-guide/helpers/url_helper.html" target="blank">safe_mailto()</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade" id="opengraphModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Link</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="http://ogp.me/" target="blank">Open Graph</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade" id="twitterModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Link</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="https://dev.twitter.com/docs/cards/preview" target="blank">Twitter cards</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade" id="facebookModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Link</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li><a href="https://developers.facebook.com/docs/plugins/" target="blank">Social Plugins</a></li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade" id="codeigniterModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Informações</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li>Ajustar no arquivo "config.php" a variável "$config['base_url']" com endereço de publicação do site.</li>
+                                  <li>Configurar dados de conexão com Banco de Dados no arquivo "database.php".</li>
+                                  <li>Alterar o valor da constante Define para "Production" no arquivo "index.php" na raiz do site.</li>
+                                  <li>Ajustar valor da variável "$config['assets_version']" em "config1.php".</li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade" id="locawebModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h6 class="modal-title">Informações</h6>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                  <li>Ajustar arquivo ".htaccess" para funcionamento do site com PHP 5.3: <br>
+                                      <span class="color-cinza">
+                                        ##### Suporte ao PHP 5.3 na Locaweb ##### 
+                                        AddHandler php53-script .php .php5 .php53 .pht .phtm .phtml
+                                        suPHP_ConfigPath ~/ 
+                                        ##### Suporte ao PHP 5.3 na Locaweb #####
+                                      </span>
+                                  </li>
+
+                                  <li>
+                                    Ajustar arquivo "php.ini" no diretório raiz da conta: <br>
+                                      <span class="color-cinza">
+                                        extension_dir = "/usr/lib64/php53/modules/" 
+                                        ;register_globals = On 
+                                        post_max_size = 106M 
+                                        memory_limit = 256M 
+                                        max_execution_time = 3600 
+                                        upload_max_filesize = 105M 
+                                        ;register_long_arrays = On 
+                                        max_input_time = 3600 
+                                        date.timezone = "America/Sao_Paulo" 
+                                        allow_url_fopen = On
+                                      </span>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                      </body>
+                      </html>

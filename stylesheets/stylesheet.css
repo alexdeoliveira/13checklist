@@ -57,7 +57,7 @@ a.button {
 	float: left;
 	margin: 28px 15px 0 0;
 }
-.reset {
+.reset,.salvar {
 	margin-top: 33px;
 }
 a.button:hover {
