@@ -1,0 +1,10 @@
+﻿Adicionado opção para verificar compatibilidade com dispositivos móveis
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch gh-pages
+# Your branch is up-to-date with 'origin/gh-pages'.
+#
+# Changes to be committed:
+#	modified:   index.html
+#
+
